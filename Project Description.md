@@ -38,3 +38,5 @@ Incorporate various "optional parameters" (hard code these in initially).
 Take note of various "bugs" that appear with certain searches.
 All-Together:
 Display the HTML content!!
+
+Showing Covid 19 by countries and show news headline
