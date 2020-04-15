@@ -26,7 +26,8 @@
     <!-- Added a link to our external Javascript code-->
     <script src="script.js"></script>
   </head>
-  <body>
+  <body> 
+    
     <header>
       <h1>Travel Planner</h1>
     </header>
@@ -34,23 +35,62 @@
     <form id="search-form">
       <label for="location-search">Search city or country</label>
       <input type="text" id="location-search" /><br />
-      <label for="date-search"> Enter Dates of Travel</label>
-      <input type="text" id="date-search" /><br />
-      <input id="search" type="submit" value="GO!" />
-      <!-- Please make a Clear button with the id clear -->
+      <input id="search" type="submit" value="GO!">
+      <button id="reset" type="reset" value="reset">reset</button>
     </form>
 
-    <div id="returned-stats"></div>
-    <div id="returned-flights"></div>
-    <div id="travel-restrictions"></div>
 
+
+
+     
+      <div class = "container">
+          <div class = "row">
+            <div class = "col-12 col-md-8">
+              <div class="card">
+                  <div class="card-body">
+                    <h2 id="active"># active cases</h2> 
+                    <h2 id="recovered"> # recovered</h2>
+                    <h2 id="deaths"># deaths</h2>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="latest-headlines"></div>
+      <div class = "container">
+        <div class = "row">
+          <div class = "col-12 col-md-8">
+            <div class="card">
+                <div class="card-body">
+                 <h3>Top head lines for country</h3>
+                 <p class="card-text" id="headline1"></p>
+                 <p class="card-text" id="headline2"></p>
+                 <p class="card-text" id="headline3"></p>
+                 <p class="card-text" id="headline4"></p>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+ 
     <script>
-      var returnedFlights = "";
-      var numOfDeaths = "";
-      var numOfCovidCases = "";
-      var localHeadlines = "";
-      var travelRestrictions = "";
-      var searchedLocation = "";
-    </script>
+    
+    var numOfDeaths = ""
+    var numOfCovidCases = ""
+    var localHeadlines  = ""
+    var travelRestrictions = ""
+    var searchedLocation = ""
+
+    $("#search").on("click", function(event){
+      
+    });
+    $("#reset").on("click", function(event){
+      
+    });
+
+  </script>
+
   </body>
 </html>
