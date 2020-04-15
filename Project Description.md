@@ -11,6 +11,8 @@ Displays facts on the country:
 
 # of Deaths
 
+# Total Recovered Cases
+
 # of active Corona cases
 
 Display Latest Headlines from NY Times
@@ -30,7 +32,7 @@ Peter:
 
 Kaitlyn :
 
-- https://documenter.getpostman.com/view/8854915/SzS7R6uu?version=latest
+- https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#83c6f85b-9617-4378-b5bc-c9c0e17dbc5d
 
 - https://english.api.rakuten.net/raygorodskij/api/NewsAPI/details
 
