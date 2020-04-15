@@ -15,7 +15,10 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <!--Added a link for google Fonts text style-->
-    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Added a link to our external stylesheet-->
     <link rel="stylesheet" href="style.css" />
@@ -23,42 +26,31 @@
     <!-- Added a link to our external Javascript code-->
     <script src="script.js"></script>
   </head>
-  <body> 
+  <body>
     <header>
       <h1>Travel Planner</h1>
     </header>
 
-    <form id= "search-form">
+    <form id="search-form">
       <label for="location-search">Search city or country</label>
-      <input type="text" id="location-search"><br>
+      <input type="text" id="location-search" /><br />
       <label for="date-search"> Enter Dates of Travel</label>
-      <input type="text" id="date-search"><br>
-      <input id="search" type="submit" value="GO!">
+      <input type="text" id="date-search" /><br />
+      <input id="search" type="submit" value="GO!" />
+      <!-- Please make a Clear button with the id clear -->
     </form>
 
-    <div id="returned-stats"> 
-
-    </div>
-    <div id="returned-flights">
-
-    </div>
-    <div id="travel-restrictions">
-
-    </div>
+    <div id="returned-stats"></div>
+    <div id="returned-flights"></div>
+    <div id="travel-restrictions"></div>
 
     <script>
-    var returnedFlights = ""
-    var numOfDeaths = ""
-    var numOfCovidCases = ""
-    var localHeadlines  = ""
-    var travelRestrictions = ""
-    var searchedLocation = ""
-
-    $("#search").on("click", function(event){
-      
-    });
-  </script>
-
+      var returnedFlights = "";
+      var numOfDeaths = "";
+      var numOfCovidCases = "";
+      var localHeadlines = "";
+      var travelRestrictions = "";
+      var searchedLocation = "";
+    </script>
   </body>
 </html>
-
