@@ -6,13 +6,15 @@ $.ajax({
 }).then(function (response) {
   console.log(response);
 
+  //   var NYTapiKey = "L4hQpiyOGEibjPv6zTL3iHLGCrbGgIER"
   var queryURL =
-    "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=L4hQpiyOGEibjPv6zTL3iHLGCrbGgIER";
+    "https://api.nytimes.com/svc/search/v2/articlesearch.json?&fq=news_desk:("Foreign")&api-key=L4hQpiyOGEibjPv6zTL3iHLGCrbGgIER";
   $.ajax({
     url: queryURL,
     method: "GET",
-  }).then(function (response) {
-    console.log(response);
+  }).then(function (responsenyt) {
+    console.log(responsenyt);
+    console.log(responsenyt.title);
   });
 });
 // Starting Data
