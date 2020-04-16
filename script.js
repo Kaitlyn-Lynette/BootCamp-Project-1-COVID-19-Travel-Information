@@ -15,20 +15,39 @@ $.ajax({
   }).then(function (responsenyt) {
     console.log(responsenyt);
 
+    var arr = responsecovid.Countries;
+    for (var i = 0; i < arr.length; i++) {
+      // Getting Countries from Array
+      arr[i];
+      console.log(arr[i]);
+    }
+
     // Starting Data
-    var totalConfirmed = responsecovid.Global.TotalConfirmed;
-    var totalDeaths = responsecovid.Global.TotalDeaths;
-    var totalRecovered = responsecovid.Global.TotalRecovered;
+    // Countries needs to make sure its based off of user input
+    // Storing Active Cases Data
+    var activeCases = responsecovid.Countries[0].TotalConfirmed;
+    // Displaying the Active Cases
+    $("#active").text("Total Active Cases :" + activeCases);
 
-    // Storing data from QueryURL
+    // Storing Total Deaths Data
+    var totalDeaths = responsecovid.Countries[0].TotalDeaths;
+    // Displaying Total Deaths
+    $("#deaths").text("Total Deaths :" + totalDeaths);
 
-    // Displaying infomration on screen
+    //Storing Total Recovered Data
+    var totalRecovered = responsecovid.Countries[0].TotalRecovered;
+    // Displaying Recovered Data
+    $("#recovered").text("Total Recovered :" + totalRecovered);
   });
 });
 
 // Search button
-$("#search").on("click", function (event) {});
+$("#search").on("click", function (event) {
+  event.preventDefault();
+});
 
-// Clear Button
-
-$("#clear").on("click", function (event) {});
+// Reset Button
+$("#reset").on("click", function (event) {
+  event.preventDefault();
+  empty();
+});
