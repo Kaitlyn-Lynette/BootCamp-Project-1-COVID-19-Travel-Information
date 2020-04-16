@@ -10,18 +10,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Added a link to Bootstrap-->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
     <!--Added a link for google Fonts text style-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
 
     <!-- Added a link to our external stylesheet-->
-    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="stylesheet" href="style.css"/>-->
 
     <!-- Added a link to our external Javascript code-->
     <script src="script.js"></script>
@@ -37,6 +31,9 @@
       <fieldset>
         <p> 
           <label>Select Country</label>
+          <div class="field">
+            <div class="control has-icons-left">
+              <div class="select is-small">
           <select id = "countryList" >
             <option value="US" class="countryISO">United States</option>
             <option value="AF" class="countryISO">Afghanistan</option>
@@ -290,6 +287,12 @@
             <option value="ZM" class="countryISO">Zambia</option>
             <option value="ZW" class="countryISO">Zimbabwe</option>
          </select>
+        </div>
+        <div class="icon is-small is-left">
+          <i class="fas fa-globe"></i>
+        </div>
+      </div>
+    </div>
         </p>
       </fieldset>
       <!--- <label for="location-search">Search city or country</label>
