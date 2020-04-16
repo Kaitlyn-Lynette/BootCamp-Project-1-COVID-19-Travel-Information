@@ -1,13 +1,9 @@
 $("#search").on("click", function (event) {
   event.preventDefault();
-  //This is pulling the value of the country from the search bar
-  var country = $("#location-search").val();
+  console.log("ISO Code Print!", $(".countryISO").val());
+  //This is pulling the value from the options
+  var country = $(".countryISO").val();
   console.log(country);
-  //This is an object where the keys are should come from a drop down and the values are the isoCodes
-  var iSOCodes = { USA: "us", Germany: "de" };
-  const keys = Object.keys(iSOCodes);
-  console.log(keys);
-  console.log(iSOCodes[keys[0]]);
 
   //We will query this API for stats on COVID
   var queryURL = "https://api.covid19api.com/summary";
@@ -33,8 +29,29 @@ $("#search").on("click", function (event) {
       method: "GET",
     }).then(function (responsenews) {
       console.log(responsenews);
+      console.log(responsenews.articles.title);
+      console.log(responsenews.articles[0].urlToImage);
+      var imageURL = responsenews.articles[0].urlToImage;
+      console.log(imageURL);
+      $(".image").html("<img src=" + imageURL + ">");
+
+      responsenews.articles.forEach(function (article) {
+        console.log(article.title);
+        if (article.title) {
+          // do something
+        }
+      });
+      // for (var i = 0; i < responsenews.articles.length; i++) {
+      //   console.log(responsenews.articles[i].title);
+      //   if(responsenews.articles[i].title) {
+
+      //   }
+      // }
+      $("#headline1").text(responsenews.articles[0].title);
     });
   });
+
+  //Append the items
 });
 
 // Clear Button
