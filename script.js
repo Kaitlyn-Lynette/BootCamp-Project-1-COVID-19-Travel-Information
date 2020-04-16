@@ -1,4 +1,4 @@
-function getCovidData(country) {
+function getCovidData() {
   // QueryURL for covid-19 Data
   var queryURL = "https://api.covid19api.com/summary";
   $.ajax({
@@ -66,6 +66,9 @@ function googleNewsData() {
 // Search button
 $("#search").on("click", function (event) {
   event.preventDefault();
+  // Getting Country Value
+  var selectCountry = $("#countryList");
+  console.log(selectCountry[0].selectedOptions[0].value);
   getCovidData();
 });
 
