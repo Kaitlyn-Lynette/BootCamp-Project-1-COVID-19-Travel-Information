@@ -55,34 +55,40 @@ function googleNewsData() {
   var queryURL =
     "https://newsapi.org/v2/top-headlines?country=" +
     countryISO +
-    "&apiKey=d7814b6763714644a52a112b30add51b";
+    "&category=health&apiKey=d7814b6763714644a52a112b30add51b";
   console.log(queryURL);
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (responsenews) {
     console.log(responsenews);
-    //console.log("ISO Code Print!", $(".countryISO").val());
-    // //This is pulling the value from the options
-    // console.log(responsenews);
-    // console.log(responsenews.articles.title);
-    // console.log(responsenews.articles[0].urlToImage);
-    var imageURL = responsenews.articles[0].urlToImage;
-    $(".image").html("<img src=" + imageURL + ">");
-    responsenews.articles.forEach(function (article) {
-      if (article.title) {
-        // do something
-      }
-    });
-    // for (var i = 0; i < responsenews.articles.length; i++) {
-    //   console.log(responsenews.articles[i].title);
-    //   if(responsenews.articles[i].title) {
-    //   }
-    // }
-    $(".content").text(responsenews.articles[0].title);
+
+    for (var i = 0; i < responsenews.articles.length; i++) {
+      var articleTitleItem = $("<li>");
+      articleTitleItem.text(responsenews.articles[i].title);
+      $("#article-titles").append(articleTitleItem);
+      var imageURL = responsenews.articles[i].urlToImage;
+      $(".image").html("<img src=" + imageURL + ">");
+      $("#image").append(imageURL);
+      console.log("Appended list!");
+    }
   });
+
   // });
+  // });
+
+  // responsenews.articles.forEach(function (article) {
+  //   if (article.title) {
+  //   }
 }
+
+// Search button
+$("#search").on("click", function (event) {
+  var selectedCountry = $("countryList");
+  event.preventDefault();
+  // console.log(selectedCountry[0].selectedOptions[0].value);
+  getCovidData();
+});
 
 // Reset Button
 // $("#reset").on("click", function (event) {});
