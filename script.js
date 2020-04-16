@@ -1,4 +1,22 @@
-function getCovidData(country) {
+// Search button
+$("#search").on("click", function (event) {
+  // Stop refreshing
+  event.preventDefault();
+  // Grabbing country index from html
+  var selectedCountry = $("#countryList");
+  var countryIndex = selectedCountry[0].selectedOptions[0].index;
+  //console.log(selectedCountry);
+  console.log(countryIndex);
+  // storing index into variable
+  num = countryIndex;
+  // Function for Covid Data
+  getCovidData();
+});
+
+// Initialize variable
+var num = 0;
+
+function getCovidData() {
   // QueryURL for covid-19 Data
   var queryURL = "https://api.covid19api.com/summary";
   $.ajax({
@@ -6,25 +24,28 @@ function getCovidData(country) {
     method: "GET",
   }).then(function (responsecovid) {
     console.log(responsecovid);
-    var arr = responsecovid.Countries;
-    for (var i = 0; i < arr.length; i++) {
-      // Getting Countries from Array
-      arr[i];
-      // Starting Data
-      // Countries needs to make sure its based off of user input
-      // Storing Active Cases Data
-      var activeCases = responsecovid.Countries[i].TotalConfirmed;
-      // Displaying the Active Cases
-      $("#active").text("Total Active Cases :" + activeCases);
-      // Storing Total Deaths Data
-      var totalDeaths = responsecovid.Countries[i].TotalDeaths;
-      // Displaying Total Deaths
-      $("#deaths").text("Total Deaths :" + totalDeaths);
-      //Storing Total Recovered Data
-      var totalRecovered = responsecovid.Countries[i].TotalRecovered;
-      // Displaying Recovered Data
-      $("#recovered").text("Total Recovered :" + totalRecovered);
-    }
+    //console.log(responsecovid.Countries);
+    // Starting Data
+    // Countries needs to make sure its based off of user input
+
+    // Storing Active Cases Data
+    var activeCases = responsecovid.Countries[num].TotalConfirmed;
+    // Displaying the Active Cases
+    $("#active").text("Total Active Cases :" + activeCases);
+    // console.log(activeCases)
+
+    // Storing Total Deaths Data
+    var totalDeaths = responsecovid.Countries[num].TotalDeaths;
+    // Displaying Total Deaths
+    $("#deaths").text("Total Deaths :" + totalDeaths);
+    // console.log(totalDeaths)
+
+    //Storing Total Recovered Data
+    var totalRecovered = responsecovid.Countries[num].TotalRecovered;
+    // Displaying Recovered Data
+    $("#recovered").text("Total Recovered :" + totalRecovered);
+    // console.log(totalRecovered)
+
     googleNewsData();
   });
 }
@@ -41,7 +62,7 @@ function googleNewsData() {
     method: "GET",
   }).then(function (responsenews) {
     console.log(responsenews);
-    console.log("ISO Code Print!", $(".countryISO").val());
+    //console.log("ISO Code Print!", $(".countryISO").val());
     // //This is pulling the value from the options
     // console.log(responsenews);
     // console.log(responsenews.articles.title);
@@ -62,12 +83,6 @@ function googleNewsData() {
   });
   // });
 }
-
-// Search button
-$("#search").on("click", function (event) {
-  event.preventDefault();
-  getCovidData();
-});
 
 // Reset Button
 // $("#reset").on("click", function (event) {});
