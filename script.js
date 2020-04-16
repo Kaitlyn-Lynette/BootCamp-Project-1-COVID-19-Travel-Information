@@ -65,7 +65,9 @@ function googleNewsData() {
 
 // Search button
 $("#search").on("click", function (event) {
+  var selectedCountry = $("countryList");
   event.preventDefault();
+  console.log(selectedCountry[0].selectedOptions[0].value);
   getCovidData();
 });
 
