@@ -47,7 +47,4 @@ $("#search").on("click", function (event) {
 });
 
 // Reset Button
-$("#reset").on("click", function (event) {
-  event.preventDefault();
-  empty();
-});
+$("#reset").on("click", function (event) {});
