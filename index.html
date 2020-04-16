@@ -19,12 +19,12 @@
       href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
 
     <!-- Added a link to our external stylesheet-->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Added a link to our external Javascript code-->
   </head>
+
   <body>
     <header>
       <h1>Travel Planner</h1>
@@ -320,15 +320,34 @@
           <div class="card">
             <div class="card-body">
               <h3>Top head lines for country</h3>
-              <p class="card-text" id="headline1"></p>
-              <p class="card-text" id="headline2"></p>
-              <p class="card-text" id="headline3"></p>
-              <p class="card-text" id="headline4"></p>
+              
+              <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">John Smith</p>
+                    <p class="subtitle is-6">@johnsmith</p>
+                  </div>
+                </div>
+                  <div class="content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+                    <a href="#">#css</a> <a href="#">#responsive</a>
+                    <br>
+                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
+
   </body>
 </html>
