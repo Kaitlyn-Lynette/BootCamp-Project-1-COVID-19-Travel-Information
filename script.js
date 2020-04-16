@@ -19,7 +19,6 @@ $.ajax({
     for (var i = 0; i < arr.length; i++) {
       // Getting Countries from Array
       arr[i];
-      console.log(arr[i]);
     }
 
     // Starting Data

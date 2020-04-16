@@ -41,3 +41,5 @@ Kaitlyn :
   Take note of various "bugs" that appear with certain searches.
   All-Together:
   Display the HTML content!!
+
+git merge master <--to update from master to yours-->
