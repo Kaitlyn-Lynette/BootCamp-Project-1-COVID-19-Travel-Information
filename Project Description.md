@@ -41,3 +41,10 @@ Kaitlyn :
   Take note of various "bugs" that appear with certain searches.
   All-Together:
   Display the HTML content!!
+
+Steps to update:
+commit your stuff and Push
+check out to master
+pull from master
+checkout your branch
+git merge master <--to update from master to yours-->
