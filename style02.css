@@ -2,22 +2,25 @@ body{
     background-color: rgb(179, 174, 174);
 }
 #active {
+    font-size: 140%;
     text-align: center;
     color: honeydew;
     background-color: gray;
 }
 #recovered {
+    font-size: 140%;
     text-align: center;
     color: honeydew;
     background-color: seagreen;
 }
 #deaths{
+    font-size: 140%;
     color: honeydew;
     background-color: red;
     text-align: center;
 }
 #search, #reset{
-    margin: 2%;
+    margin: 0%;
 }
 h3{
     border: 3px solid rgb(200, 198, 198);
@@ -28,4 +31,10 @@ h3{
     text-align: center;
     font-size: 150%;
     font-family: 'Concert One', cursive;
+}
+#FaceBook{
+    margin-top: 10%;
+}
+@media (max-width: 1024px){
+
 }

@@ -11,6 +11,9 @@
 
     <!-- Added a link to Bulma-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.css">
+    <!--Lokal link for Bulba CSS-->
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/v4-shims.min.css">
     <!--Added a link for google Fonts text style-->
     <link
       href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap"
@@ -22,7 +25,7 @@
 
   <body>
     <header>
-      <section class="hero is-info">
+      <section class="hero is-info is-small">
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
@@ -37,7 +40,7 @@
                 <label>Select Country</label>
                 <div class="field">
                   <div class="control has-icons-left">
-                    <div class="select is-small">
+                    <div class="select ">
                 <select id="countryList">
                   <option value="US" class="countryISO">United States</option>
                   <option value="AF" class="countryISO">Afghanistan</option>
@@ -299,8 +302,13 @@
               <div class="icon is-small is-left">
                 <i class="fas fa-globe"></i>
               </div>
-              <input id="search" class="button is-link is-rounded is-small" type="submit" value="GO!" />
-              <button id="reset" class="button is-link is-rounded is-small" type="reset" value="reset">Reset</button>
+              <p class="card-header-item is-left">
+                <span>
+                  Share on <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i>FaceBook</a>
+                </span>
+              </p>
+              <input id="search" class="button is-link is-rounded" type="submit" value="GO!" />
+              <button id="reset" class="button is-link is-rounded " type="reset" value="reset">Reset</button>
             </form>
             </div>
            </div>
@@ -310,8 +318,8 @@
     </header>
 
     <div class="container">
-      <div class="columns">
-        <div class="column">
+      <div class="columns is-mobile">
+        <div class="column ">
               <h2 id="active"># Active</h2>
         </div>
          <div class="column">
@@ -329,10 +337,21 @@
               <!-- //Article One -->
         <div class="card">
           <div class="card-image">
-            <figure class="image is-3by2">
+            <!-- <figure class="image is-3by2"> -->
+              
             </figure>
           </div>
           <div class="card-content">
+            <div class="tile ">
+              <article class="tile is-child notification is-info is-small">
+                <p class="title">COVID-19</p>
+                <p class="subtitle">Please stay home stay healthy</p>
+                <figure class="image is-3by3">
+                  <img src="unnamed.jpg">
+                </figure>
+              </article>
+            </div>
+          </div>
               <div class="content">
                 <ul id= "article-titles">
                   <!-- <div id="list-item"></div> -->
