@@ -32,9 +32,14 @@ h3{
     font-size: 150%;
     font-family: 'Concert One', cursive;
 }
-#FaceBook{
-    margin-top: 10%;
+.select select:not([multiple]) {
+    padding-right: 3.5em;
+    width: 100%;
 }
+.control.has-icons-left .input, .control.has-icons-left .select select {
+    padding-left: 2.5em;
+}
+
 @media (max-width: 1024px){
 
 }
