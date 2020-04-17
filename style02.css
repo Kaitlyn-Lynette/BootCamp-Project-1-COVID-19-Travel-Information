@@ -2,22 +2,25 @@ body{
     background-color: rgb(179, 174, 174);
 }
 #active {
+    font-size: 140%;
     text-align: center;
     color: honeydew;
     background-color: gray;
 }
 #recovered {
+    font-size: 140%;
     text-align: center;
     color: honeydew;
     background-color: seagreen;
 }
 #deaths{
+    font-size: 140%;
     color: honeydew;
     background-color: red;
     text-align: center;
 }
 #search, #reset{
-    margin: 2%;
+    margin: 0%;
 }
 h3{
     border: 3px solid rgb(200, 198, 198);
@@ -28,4 +31,30 @@ h3{
     text-align: center;
     font-size: 150%;
     font-family: 'Concert One', cursive;
+}
+.select select:not([multiple]) {
+    padding-right: 3.5em;
+    width: 100%;
+}
+.control.has-icons-left .input, .control.has-icons-left .select select {
+    padding-left: 2.5em;
+}
+
+@media (max-width: 1024px){
+
+}
+@media (max-width: 768px){
+
+}
+@media (max-width: 414px){
+    #search, #reset {
+        margin: 2%;
+    }
+
+}
+@media (max-width: 375px){
+    #search, #reset {
+        margin: 2%;
+    }
+
 }
