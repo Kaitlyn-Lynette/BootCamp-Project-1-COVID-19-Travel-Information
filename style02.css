@@ -44,7 +44,17 @@ h3{
 
 }
 @media (max-width: 768px){
+
+}
+@media (max-width: 414px){
     #search, #reset {
         margin: 2%;
     }
+
+}
+@media (max-width: 375px){
+    #search, #reset {
+        margin: 2%;
+    }
+
 }
