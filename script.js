@@ -64,6 +64,9 @@ function googleNewsData() {
       var author = newArray.author;
       var URL = newArray.url;
       var title = newArray.title;
+      if (!author){
+        author = ""
+      }
       $("#article-titles").prepend(
         '<div class="card"><div class="card-content"> <div class="card-image"> <figure class="image is-3by2"> <img src="' +
           imageSource +
