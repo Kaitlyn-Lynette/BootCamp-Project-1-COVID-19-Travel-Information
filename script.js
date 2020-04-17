@@ -61,16 +61,27 @@ function googleNewsData() {
     url: queryURL,
     method: "GET",
   }).then(function (responsenews) {
-    console.log(responsenews);
-
-    for (var i = 0; i < responsenews.articles.length; i++) {
-      var articleTitleItem = $("<li>");
-      articleTitleItem.text(responsenews.articles[i].title);
-      $("#article-titles").append(articleTitleItem);
-      var imageURL = responsenews.articles[i].urlToImage;
-      $(".image").html("<img src=" + imageURL + ">");
-      $("#image").append(imageURL);
-      console.log("Appended list!");
+    var resonseAPI = responsenews.articles;
+    console.log(resonseAPI);
+    var mainContainerDIV = $("div");
+    for (var i = 0; i < resonseAPI.length; i++) {
+      var newArray = resonseAPI[i];
+      var imageSource = newArray.urlToImage;
+      var author = newArray.author;
+      var URL = newArray.url;
+      var title = newArray.title;
+      $("#article-titles").append(
+        '<div class="card"><div class="card-content"> <div class="card-image"> <figure class="image is-3by2"> <img src="' +
+          imageSource +
+          '" alt="Placeholder image"> </figure> </div> <div class="media"> <div class="media-content"> <p class="subtitle is-6">' +
+          author +
+          '</p> </div> </div> <div class="content">' +
+          "<a href=" +
+          URL +
+          ">" +
+          title +
+          "</a> </div>"
+      );
     }
   });
 
