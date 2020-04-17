@@ -23,27 +23,22 @@ function getCovidData() {
     method: "GET",
   }).then(function (responsecovid) {
     console.log(responsecovid);
-    //console.log(responsecovid.Countries);
     // Starting Data
     // Countries needs to make sure its based off of user input
-
     // Storing Active Cases Data
     var activeCases = responsecovid.Countries[num].TotalConfirmed;
     // Displaying the Active Cases
     $("#active").text("Total Active Cases :" + activeCases);
-    // console.log(activeCases)
 
     // Storing Total Deaths Data
     var totalDeaths = responsecovid.Countries[num].TotalDeaths;
     // Displaying Total Deaths
     $("#deaths").text("Total Deaths :" + totalDeaths);
-    // console.log(totalDeaths)
 
     //Storing Total Recovered Data
     var totalRecovered = responsecovid.Countries[num].TotalRecovered;
     // Displaying Recovered Data
     $("#recovered").text("Total Recovered :" + totalRecovered);
-    // console.log(totalRecovered)
 
     googleNewsData();
   });
