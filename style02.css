@@ -22,6 +22,11 @@ body{
 #search, #reset{
     margin: 0%;
 }
+a {
+    color: #09f61d;
+    cursor: pointer;
+    text-decoration: none;
+}
 h3{
     border: 3px solid rgb(200, 198, 198);
     text-align: center;
